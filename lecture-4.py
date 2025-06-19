@@ -18,3 +18,10 @@ new_dict = {
 }
 dict.update(new_dict)
 print(dict)#just value is replaced
+
+
+
+#set in python
+collection= { 23,3,4,45,"masha","ritika","monika"}
+print(collection)
+print(type(collection))
