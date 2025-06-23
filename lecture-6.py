@@ -70,3 +70,38 @@ converter(4)
 
 
 converter(100)
+
+
+#recursion function
+
+def show(n):
+    if(n == 0):
+        return
+    print(n)
+    show(n-1)
+
+show(5)
+
+def show(n):
+    if(n == 0):
+        return
+    print(n)# here print the value of the n first
+    show(n-1)
+
+show(20)
+
+def show(n):
+    if(n == -1):
+        return
+    print(n)# here print the value of the n first
+    show(n-1)
+
+show(22)
+
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))
