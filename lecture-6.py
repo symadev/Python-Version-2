@@ -105,3 +105,13 @@ def factorial(n):
     return n * factorial(n - 1)
 
 print(factorial(5))
+
+
+def print_list(list, idx=0):
+    if(idx == len(list)):
+        return
+    print(list[idx])
+    print_list(list, idx+1)
+fruits = ["mango", "banana", "apple", "litchi"]
+
+print_list(fruits)
