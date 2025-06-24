@@ -65,8 +65,32 @@ with open("demo.txt", "r") as f:
 with open("demo.txt", "w") as f:
     f.write("new data")# replaced text by nre data
 
+#important example
+
 with open("practice.txt", "r") as f:
     data = f.read()
 
 new_data = data.replace("java", "python")
 print(new_data)
+
+
+
+
+word = "learning"
+with open("practice.txt", "r") as f:
+    data = f.read()
+    if(data.find(word) != -1):
+        # if (word in data) != -1):
+        print("found")
+    else:
+        print(" not found")
+
+
+word = "xlearning"
+with open("practice.txt", "r") as f:
+    data = f.read()
+    if(data.find(word) != -1):
+        print("found")
+    else:
+        print(" not found")
+
