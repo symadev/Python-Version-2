@@ -1,5 +1,6 @@
 str1 = "my name is tisha.\n i am 23 years old"
-
+strmain = "my name is ritu"
+print(len(strmain))
 print(str1)
 print(len(str1))
 #indexing

@@ -124,11 +124,11 @@ class Animal(ABC):
 
 class Dog(Animal):
     def sound(self):
-        return "Ghew Ghew"
+        return "Ghew "
 
 class Cat(Animal):
     def sound(self):
-        return "Meow Meow"
+        return "Meow"
 
 d = Dog()
 print(d.sound())  # Ghew Ghew
