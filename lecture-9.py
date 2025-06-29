@@ -142,6 +142,19 @@ print(animal1.sound())
 
 
 
+class Person():
+    name= "mahin kumar"
+
+    def changeClass (self,name):
+        self.name= name
+
+p1 = Person()
+p1.changeClass("rahul kumar")
+print(p1.name)
+print(Person.name)
+
+
+
 
 
 
