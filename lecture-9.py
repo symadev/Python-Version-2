@@ -140,7 +140,7 @@ class Cat(Animal):
 animal1= Cat()
 print(animal1.sound())
 
-
+#class method
 
 class Person():
     name= "mahin kumar"
@@ -156,14 +156,112 @@ print(Person.name)
 
 
 
+class Person():
+    name= "mahin kumar"
+
+    def changeClass (self,name):
+        Person.name= name
+
+p1 = Person()
+p1.changeClass("rahul kumar")
+print(p1.name)
+print(Person.name)
+
+
+
+
+# @classmethod দিয়ে ডেকোরেট করা মেথডগুলোতে self এর জায়গায় cls প্যারামিটার ব্যবহার করা হয়।
+#
+# এর মাধ্যমে ক্লাসের সাথে সম্পর্কিত কাজ করা যায়, যেমন: ক্লাস লেভেল ডেটা অ্যাকসেস বা অবজেক্ট তৈরি করার জন্য ফ্যাক্টরি মেথড তৈরি করা।
+
+
+
+# class Student:
+#     school_name = "ABC School"
+#
+#     def __init__(self, name, grade):
+#         self.name = name
+#         self.grade = grade
+#
+#     @classmethod
+#     def change_school(cls, new_name):
+#         cls.school_name = new_name
+#
+#     def show(self):
+#         print(f"Name: {self.name}, Grade: {self.grade}, School: {Student.school_name}")
+#
+#
+#
+# p1 = Student()
+
+
+print([1,2,4]+[1,2,4])# this is called the marge
+
+
+class Complex:
+    def __init__(self, real, img):
+        self.real = real
+        self.img = img
+
+    def showNumber(self):
+        print(self.real, "i +", self.img, "j")
+
+num1 = Complex(1, 3)
+num1.showNumber()
+class Complex:
+    def __init__(self, real, img):
+        self.real = real
+        self.img = img
+
+    def showNumber(self):
+        print(self.real, "i +", self.img, "j")
+
+    def __add__(self, num2):
+        newReal = self.real + num2.real
+        newImg = self.img + num2.img
+        return Complex(newReal, newImg)
+
+
+    def __sub__(self, num2):
+        newReal = self.real - num2.real
+        newImg = self.img - num2.img
+        return Complex(newReal, newImg)
+
+
+    num1 = Complex(1, 3)
+    num1.showNumber()  # Output: 1 i + 3 j
+
+    num2 = Complex(4, 6)
+    num2.showNumber()  # Output: 4 i + 6 j
+
+    num2 = Complex(2, 10)
+    num2.showNumber()  # Output: 4 i + 6 j
+
+
+
+    num2 = Complex(3, 6)
+    num2.showNumber()  # Output: 4 i + 6 j
+
+
+
+
+class Employee:
+    def __init__(self, role, dept, salary):
+        self.role = role
+        self.dept = dept
+        self.salary = salary
+
+
+
+    def showDetails(self):
+        print("role =", self.role)
+        print("dept =", self.dept)
+        print("salary =", self.salary)
 
 
 
 
 
-
-
-
-
-
+e1 = Employee("accountant", "Finance", "60,000")
+e1.showDetails()
 
