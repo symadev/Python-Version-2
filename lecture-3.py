@@ -24,12 +24,26 @@ print(tup.index(3))
 print(tup.count(3))
 
 
-movies=[]
-movie1=input("my first movie is :")
-movies.append(movie1)
-movie2=input("my second movie is :")
-movies.append(movie2)
-movie3=input("my third movie is :")
-movies.append(movie3)
-print(movies)
+# movies=[]
+# movie1=input("my first movie is :")
+# movies.append(movie1)
+# movie2=input("my second movie is :")
+# movies.append(movie2)
+# movie3=input("my third movie is :")
+# movies.append(movie3)
+# print(movies)
+
+
+
+
+
+moviesEx = ['kurup',"lupin","bad boy", "wakanda","the mummy","ghoust"]
+print(moviesEx)
+print(moviesEx.append("sharlok"))
+print(moviesEx.sort())
+print(moviesEx.reverse())
+print(moviesEx.remove("kurup"))
+print(moviesEx.insert(2,"kata"))
+print(moviesEx.pop(4))
+
 

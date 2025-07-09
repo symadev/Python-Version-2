@@ -6,6 +6,8 @@ print(len(str1))
 #indexing
 print(str1[5])
 
+print(str1[1])
+
 #slicing
 
 print(str1[5:10])
@@ -44,4 +46,41 @@ elif  age<= 8:
     print("this is my sister ")
 else:
     print("this is my  mom")
+
+
+
+# practice
+
+MainStr= "i am the queen . \n this is my house"
+print(MainStr)
+print(MainStr[10])
+print(MainStr[10:12])
+print(MainStr.find("i"))
+MainStr2 =MainStr.capitalize()#just first letter will bw convert in the capital from
+print(MainStr2 )
+print(MainStr[10:12])
+print(MainStr[-10:-14])
+print(MainStr.count("a"))
+print(MainStr.replace("e", "b"))
+
+
+
+# loop practice
+
+
+age =int(input("my real age is :"))
+if age<=20:
+    print ("this is too  much")
+elif age>=20:
+    print("this is not the too much")
+else:
+    print("i am done with that age")
+
+
+
+
+
+
+
+
 
