@@ -77,6 +77,11 @@ else:
     print("i am done with that age")
 
 
+name1=(input("my first name is :"))
+name2=(input("my last name is :"))
+print("hello i am" ,name1 ,name2)
+
+
 
 
 
