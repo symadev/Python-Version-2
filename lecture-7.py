@@ -2,7 +2,7 @@ f=open("demo.txt","r")
 data = f.read()
 print(data)
 print(type(data))
-f.close()
+f.close()# here f means file
 
 f=open("demo.txt","r")
 data = f.read(10)
@@ -80,7 +80,7 @@ word = "learning"
 with open("practice.txt", "r") as f:
     data = f.read()
     if(data.find(word) != -1):
-        # if (word in data) != -1):
+        # if (word in data) != -1): # -1 ar equal na hoi ,, tar mane found
         print("found")
     else:
         print(" not found")
@@ -89,7 +89,7 @@ with open("practice.txt", "r") as f:
 word = "xlearning"
 with open("practice.txt", "r") as f:
     data = f.read()
-    if(data.find(word) != -1):
+    if(data.find(word) != -1): # -1 ar equal na hoi ,, tar mane found
         print("found")
     else:
         print(" not found")
