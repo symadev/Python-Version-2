@@ -9,10 +9,10 @@ while i<=10:
 
 print("loop ended")
 # print a multiplication table
-n=int(input("the first input is :"))
+n =int(input("the first input is :"))
 i=1
 while i<=10:
-    print(i*15)
+    print(i*n)
     i+=1
 
 

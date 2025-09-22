@@ -47,3 +47,11 @@ print(moviesEx.insert(2,"kata"))
 print(moviesEx.pop(4))
 
 
+
+tuple= (34,3,2,1,9)
+print (tuple)
+print (type(tuple))
+print (tuple.index(3))
+print (tuple.count(2))# braket at+ra number kotobar show korce
+
+
