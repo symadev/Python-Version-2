@@ -94,3 +94,12 @@ with open("practice.txt", "r") as f:
     else:
         print(" not found")
 
+
+
+
+order_amount=int(input("enter your order amount :"))
+
+delivery_cost= 0 if order_amount > 300 else 30
+
+print(" the delivery price is:",delivery_cost)
+
