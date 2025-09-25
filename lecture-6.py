@@ -115,3 +115,65 @@ def print_list(list, idx=0):
 fruits = ["mango", "banana", "apple", "litchi"]
 
 print_list(fruits)
+
+
+
+
+def add_vat(price, vat_rate):
+    return price * (100 + vat_rate) / 100
+
+
+orders = [100, 150, 200]
+
+for price in orders:
+    final_amount = add_vat(price, 10)
+    print( f"Original price: {price}, Final with VAT: {final_amount}")
+
+
+
+
+
+
+    x = 10  # Global variable
+
+
+    def outer():
+        y = 20  # Enclosing variable
+
+        def inner():
+            z = 30  # Local variable
+            print("Local:", z)
+            print("Enclosing:", y)
+            print("Global:", x)
+            print("Built-in:", len([1, 2, 3]))
+
+        inner()
+
+
+    outer()
+
+
+    def outer():
+        x = 10  # enclosing variable
+
+        def inner():
+            nonlocal x  # outer এর x কে রেফার করলাম
+            x = 20  # outer এর x পরিবর্তন করলাম
+
+        inner()
+        print("After inner:", x)
+
+
+    outer()
+
+
+
+x = 10   # global variable
+
+def change_global():
+    global x   # বলছি x হলো global
+    x = 20     # global x পরিবর্তন করলাম
+
+change_global()
+print(x)
+
