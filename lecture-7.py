@@ -103,3 +103,7 @@ delivery_cost= 0 if order_amount > 300 else 30
 
 print(" the delivery price is:",delivery_cost)
 
+
+for token in range  (1,10): # 0-9 index print hobe just
+    print("this is my value", token)
+
