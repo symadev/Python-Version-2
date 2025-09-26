@@ -70,3 +70,32 @@ print(next(squares))  # 4
 #
 # Generator comprehension: তুমি waiter কে বলছো, “যখন আমি ডাকব, তখন একটা খাবার আনবে।” Waiter একে একে খাবার আনছে।
 # (মেমোরি efficient, প্রয়োজনমতো ডেলিভারি)
+
+
+
+# //infinate generators
+
+def infinite_counter(start=0):
+    while True:
+        yield start
+        start += 1   # প্রতিবার ১ করে বাড়বে
+
+gen = infinite_counter()
+
+# Infinite বলে break করতে হবে
+for num in gen:
+    if num > 10:
+        break
+    print(num)
+
+
+def even_numbers():
+    n = 0
+    while True: # this is the infinite loop ,which is never finish
+        yield n
+        n += 2
+
+gen = even_numbers()
+
+for i in range(5):
+    print(next(gen))

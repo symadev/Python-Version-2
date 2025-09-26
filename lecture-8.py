@@ -148,4 +148,177 @@ car1 = car()
 car1.start()
 
 
+# perameterised constructor
+
+class Student1:
+    # Parameterized Constructor
+    def __init__(self, name, roll):
+        self.name = name
+        self.roll = roll
+
+    def display(self):
+        print(f"Name: {self.name}, Roll: {self.roll}")
+
+
+# Object তৈরি করার সময় parameter দিতে হবে
+s1 = Student1("Rahim", 101)
+s2 = Student1("Karim", 102)
+
+s1.display()
+s2.display()
+
+
+
+# //without Parameterized Constructor
+
+
+
+class Student2:
+    # Default constructor (no parameter except self)
+    def __init__(self):
+        self.name = "Unknown"
+        self.roll = 0
+
+    def display(self):
+        print(f"Name: {self.name}, Roll: {self.roll}")
+
+
+# Object বানানোর সময় কোনো parameter লাগবে না
+s1 = Student2()
+s2 = Student2()
+
+s1.display()
+s2.display()
+
+
+
+
+
+#  a proper example of all
+
+class Student:
+    # Constructor (Parameterized)
+    def __init__(self, name, roll, dept):
+        # Attributes
+        self.name = name
+        self.roll = roll
+        self.dept = dept
+
+    # Method 1: Display info
+    def display_info(self):
+        print(f"Name: {self.name}, Roll: {self.roll}, Dept: {self.dept}")
+
+    # Method 2: Change department
+    def change_dept(self, new_dept):
+        self.dept = new_dept
+        print(f"{self.name}'s department changed to {self.dept}")
+
+
+# ---------------------------
+# Creating Objects
+s1 = Student("Rahim", 101, "CSE")
+s2 = Student("Karim", 102, "EEE")
+
+# Accessing methods
+s1.display_info()
+s2.display_info()
+
+# Changing attribute using method
+s1.change_dept("AI")
+
+# Again display after change
+s1.display_info()
+
+
+
+
+# //example of encapsulation
+
+
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.__balance = balance   # private attribute
+
+    # Public method → balance check
+    def get_balance(self):
+        return self.__balance
+
+    # Public method → deposit
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited {amount}, New Balance = {self.__balance}")
+        else:
+            print("Invalid deposit amount")
+
+    # Public method → withdraw
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+            print(f"Withdrew {amount}, New Balance = {self.__balance}")
+        else:
+            print("Invalid withdrawal amount or insufficient balance")
+
+
+
+
+
+# abstruction example
+
+from abc import ABC, abstractmethod
+
+# Abstract Class
+class Animal(ABC):
+    @abstractmethod
+    def sound(self):
+        pass   # শুধু method define করা হলো, implement করা হলো না
+
+# Child Class (implementing abstract method)
+class Dog(Animal):
+    def sound(self):
+        return "Woof Woof!"
+
+class Cat(Animal):
+    def sound(self):
+        return "Meow!"
+
+# Object তৈরি
+d = Dog()
+c = Cat()
+
+print(d.sound())  # Woof Woof!
+print(c.sound())  # Meow!
+
+
+
+
+# //inheritance example
+
+
+# Parent class
+class Vehicle:
+    def __init__(self, brand, wheels):
+        self.brand = brand
+        self.wheels = wheels
+
+    def show_info(self):
+        print(f"Brand: {self.brand}, Wheels: {self.wheels}")
+
+# Child class (inherit Vehicle)
+class Car(Vehicle):
+    def __init__(self, brand, wheels, model):
+        super().__init__(brand, wheels)   # Parent constructor call
+        self.model = model
+
+    def show_model(self):
+        print(f"Model: {self.model}")
+
+# Object তৈরি
+v = Vehicle("Generic", 2)
+v.show_info()   # Brand: Generic, Wheels: 2
+
+c = Car("Toyota", 4, "Corolla")
+c.show_info()   # Parent method reused → Brand: Toyota, Wheels: 4
+c.show_model()  # Child method → Model: Corolla
 
