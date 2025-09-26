@@ -322,3 +322,65 @@ c = Car("Toyota", 4, "Corolla")
 c.show_info()   # Parent method reused → Brand: Toyota, Wheels: 4
 c.show_model()  # Child method → Model: Corolla
 
+
+
+
+
+
+
+
+
+
+class BankAccounts:
+    def __init__(self, balance):
+        # internal variable (not meant to be accessed directly)
+        self._balance = balance
+
+    @property
+    def balance(self):
+        """Getter: safely read the balance"""
+        return self._balance
+
+    @balance.setter
+    def balance(self, value):
+        """Setter: safely update the balance"""
+        if value < 0:
+            print("Balance cannot be negative!")
+        else:
+            self._balance = value
+
+    def deposit(self, amount):
+        if amount > 0:
+            self._balance += amount
+        else:
+            print("Deposit must be positive!")
+
+    def withdraw(self, amount):
+        if 0 < amount <= self._balance:
+            self._balance -= amount
+        else:
+            print("Invalid withdrawal amount!")
+
+
+# ----------- Using the class -----------
+account = BankAccounts(100)
+
+print(account.balance)   #  100 (calls @property getter)
+
+account.deposit(50)
+print(account.balance)   #  150
+
+account.withdraw(30)
+print(account.balance)   #  120
+
+# Using the setter
+account.balance = 200
+print(account.balance)   #  200
+
+# Invalid setter usage
+account.balance = -50    # ❌ Balance cannot be negative!
+
+
+
+
+
