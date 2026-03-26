@@ -1,6 +1,5 @@
 print("syma sultana")
-print("monika")
-print("rinty")
+
 
 name = "mala"
 age= 23
@@ -8,24 +7,26 @@ age2= age
 height = 67.89
 
 print(name)
-print(type(name))
-print(type(height))
 print(age2)
-print(height)
+print(type(height))
 
-
+print(type(age2))
 
 
 old = True
 a = None
-print(type(old))
-print(type(a))
+
 
 a= 23
 b=34
 sum = a+b
 print(sum)
 
+
+a= 222
+b=34
+sum= a+b
+print(sum)
 # arithmetic operators
 
 a=34
@@ -39,17 +40,18 @@ print(a**b)#a^b
 
 
 
+
 # relational operators
 #it always return the true false output
-
+# relationship operator alwways true false output dei
 a=2
 b=4
 print(a==b)
 print(a!=b)
-print(a>=b)
 print(a<=b)
-print(a<b)
+print(a>=b)
 print(a>b)
+print(a<b)
 
 
 # assignment operator
@@ -77,6 +79,17 @@ print(name,age, profession)
 
 val=int(input("enter your value:"))
 print(type(val))
+print(val)
+
+
+# assignment operator
+num = 18
+num%= 3
+print("num:", num)# show the reminder
+# remainder amne holo vagshesh
+num = 26
+num%= 5
+print("num:", num)# show the reminder
 
 
 

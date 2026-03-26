@@ -84,3 +84,22 @@ while i<=n:
     sum+=i #sum = sum+i
     i+=1
     print("the total sum is", sum)
+
+
+i = 1
+while i<=10:
+    print("i am a good girl")
+    i+=1
+
+
+print("shesh program")
+
+
+
+for i in range(5):# 5 ar age ponto print hobe range ar
+    print (i)
+
+
+
+for i in range(5,27,15):# 5 ar age ponto print hobe range ar
+    print (i)

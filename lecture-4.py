@@ -27,9 +27,10 @@ print(collection)
 print(type(collection))
 collection.add(49)
 collection.remove(49)
-collection.pop()#first element  delete  in this pop operation
+collection.pop()#first elememnt delete in the pop operation
 print(collection)
 collection2= {23,45,6789,90,7,2}
-print(collection2.union(collection))#print with added the collection2
+print(collection2.union(collection))#print with added the collection 2
 print(collection2.intersection(collection))#show the common elememnt
 # set ignore the duplicate items
+#intersection dile 2 collection ar moddhe common value guo show korbe

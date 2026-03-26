@@ -1,26 +1,40 @@
-marks = [12,23,34,"kurup",23.34]
-print(marks)
-print(type(marks))
-print(marks[2:])
-print(marks[0:4])
+maka = [23, 45,56,67,89]
+print(maka.append(69))
+print(maka.sort())
+print(maka.reverse())
+print(maka.remove(45))
+print(maka)
+list2 = [56, 67, 78, 89]
 
-list=[56, 45]
+# add element
 
-print(list.append(3))
-print(list.sort())
-print(list.sort(reverse=True))
-print(list.reverse())
-print(list.insert(2,1))
-print(list.remove(56))
-print(list.pop(2))#remove element from index
-print(list)
+# sort ascending
+list2.sort()
 
+# sort descending
+list2.sort(reverse=True)
+
+# reverse list
+list2.reverse()
+
+# insert at index 2
+list2.insert(2, 1)
+
+# remove element
+list2.remove(56)
+
+# pop element from index 2 (this returns a value)
+popped_value = list2.pop(2)
+print("Popped value:", popped_value)
+
+# final list
+print("Final list:", list2)
 
 #touples
 tup =(23,3,223,3,34,)
 print(tup)
 print(type(tup))
-print(tup.index(3))
+print(tup.index(3))#index dile koto no index a ase oitai show korbe aikahen
 print(tup.count(3))
 
 

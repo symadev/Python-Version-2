@@ -1,3 +1,30 @@
+def greet(name):
+    print("Hello! I am",name)
+
+greet("ritu")
+
+
+def greetings(a,b):
+    add = a - b
+    print (add)
+    return add
+
+greetings(89,12)
+
+
+
+def greed(a,b):
+    add = a * b
+    print (add)
+    return add
+
+greed(6,12)
+
+
+
+
+
+
 def calc_sum(a,b):
     #thats mean it uses one time in the function
     sum = a + b
