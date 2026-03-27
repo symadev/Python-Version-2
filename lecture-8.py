@@ -1,3 +1,32 @@
+class don:
+    name = "maha" # this is class variable
+    age = 23
+name1= don()# this is object
+print(name1.name)
+print(name1.age)
+
+class don2 :
+    name = "raka"
+    def __init__(self):
+        print("added new don")
+
+name2 = don2()
+print(name2.name)
+
+class don3 :
+
+    def __init__(self,fullname):
+        self.name = fullname
+        print("added new don")
+
+
+
+name3 = don3("raba bhai")# this is object variable
+print(name3.name)
+
+
+
+
 class car :
     color ="blue"
     name= "rashikh"
@@ -380,6 +409,33 @@ print(account.balance)   #  200
 # Invalid setter usage
 account.balance = -50    # ❌ Balance cannot be negative!
 
+
+
+class english:
+    name ="mahin" # thsi is called class variable
+    roll = 23
+s1 = english()
+print(s1.name)
+print(s1.roll)
+
+
+class school:
+     def __init__(self,schoolname):
+         self.schoolname = schoolname
+         print ("new school is created")
+
+s2 = school("lions school") # this is called opject variable
+print(s2.schoolname)
+
+
+class student:
+    def __init__(self, opinion):
+        self.opinion = opinion
+        print("new school is created")
+
+
+s3 = student("this is my fav school")
+print(s3.opinion)
 
 
 

@@ -4,6 +4,12 @@ print(data)
 print(type(data))
 f.close()# here f means file
 
+f=open("read.txt","r")#file ta open korlo
+data = f.read()# file ta read korlo
+print(data)# file ar data k print korlo
+print(type(data))#ki type ar data ta include korlo
+f.close()# fila ta close kore dilo
+
 f=open("demo.txt","r")
 data = f.read(10)
 print(data)
@@ -16,27 +22,22 @@ print(data)
 print(type(data))
 f.close()
 
+
+
+
+f=open("read.txt","w")
+data = f.write("ritu you are the best man , oh hooo!!!")
+print(data)
+print(type(data))
+
+f.close()
+
 f=open("write.txt","w")
-data = f.write(" i love you so much ")
+data = f.write(" ritu you are the best man , oh hooo!! ")
 print(data)
 print(type(data))
 
 f.close()
-
-
-f=open("read.txt","w")# automatic file  reate hoye chole ashbe
-data = f.write(" i love you so much ")
-print(data)
-print(type(data))
-
-f.close()
-
-# f=open("demo.txt","r+")
-# data = f.write(" i love you so much ")
-# print(data)
-# print(type(data))
-#
-# f.close()
 
 
 f = open("demo.txt", "a+")
@@ -59,7 +60,7 @@ f.write("abc")#
 print(f.read())
 f.close()
 
-with open("demo.txt", "r") as f:
+with open("demo.txt", "r") as f: # with use korle kaj shesh hole python nije file off kore dey
     data = f.read()
     print(data)
 with open("demo.txt", "w") as f:
@@ -76,23 +77,10 @@ print(new_data)
 
 
 
-word = "learning"
-with open("practice.txt", "r") as f:
-    data = f.read()
-    if(data.find(word) != -1):
-        # if (word in data) != -1): # -1 ar equal na hoi ,, tar mane found
-        print("found")
-    else:
-        print(" not found")
 
 
-word = "xlearning"
-with open("practice.txt", "r") as f:
-    data = f.read()
-    if(data.find(word) != -1): # -1 ar equal na hoi ,, tar mane found
-        print("found")
-    else:
-        print(" not found")
+
+
 
 
 
